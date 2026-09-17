@@ -1,0 +1,366 @@
+:root {
+  --ink: #1c2827;
+  --muted: #71807d;
+  --line: #dfdfd8;
+  --paper: #f4f1e9;
+  --white: #fffdf8;
+  --teal: #08796e;
+  --teal-dark: #07564f;
+  --teal-soft: #e1f1eb;
+  --amber: #bb7020;
+  --red: #c75849;
+  --shadow: 0 18px 45px rgba(44, 60, 54, .07);
+}
+
+body {
+  background-color: var(--paper);
+  background-image: linear-gradient(rgba(56, 75, 67, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(56, 75, 67, .035) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.sidebar {
+  width: 264px;
+  flex-basis: 264px;
+  background: #163c38;
+  padding: 32px 20px 24px;
+  box-shadow: 8px 0 28px rgba(25, 52, 47, .09);
+}
+
+.brand {
+  padding: 0 10px;
+  letter-spacing: -1px;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: #e6c66e;
+  color: #173f3a;
+}
+
+.location {
+  margin-top: 45px;
+  border-color: rgba(219, 241, 233, .22);
+}
+
+.nav-item {
+  padding: 12px 13px;
+  border-radius: 7px;
+}
+
+.nav-item.active {
+  background: #e5f1ea;
+  color: #184f49;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
+}
+
+.nav-item.active .nav-icon {
+  color: #bf7147;
+}
+
+.sidebar-note {
+  border-left-color: #e6c66e;
+  background: rgba(255, 255, 255, .075);
+}
+
+.main-content {
+  max-width: 1680px;
+  padding: 0 54px 40px;
+}
+
+.topbar {
+  min-height: 76px;
+  border-bottom-color: rgba(90, 104, 96, .16);
+}
+
+.breadcrumbs strong {
+  color: #a4543f;
+}
+
+.page-heading {
+  padding: 45px 0 30px;
+}
+
+.page-heading h1 {
+  font-size: 34px;
+  letter-spacing: -1.6px;
+}
+
+.eyebrow {
+  color: #a4543f;
+  letter-spacing: 1.6px;
+}
+
+.subheading {
+  color: #72817c;
+}
+
+.heading-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.control-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border: 1px solid #d9d4c7;
+  border-radius: 5px;
+  background: rgba(255, 253, 248, .76);
+  color: #687873;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .9px;
+  text-transform: uppercase;
+}
+
+.control-status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2d9b78;
+  box-shadow: 0 0 0 4px rgba(45, 155, 120, .12);
+}
+
+.primary-button {
+  border-radius: 5px;
+  background: #b75f43;
+  box-shadow: 0 7px 18px rgba(183, 95, 67, .2);
+}
+
+.primary-button:hover {
+  background: #944936;
+}
+
+.metric-grid {
+  gap: 14px;
+}
+
+.metric-card {
+  min-height: 142px;
+  border: 1px solid #e2e0d8;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.metric-card.highlight {
+  position: relative;
+  overflow: hidden;
+  background: #174f4a;
+  border-color: #174f4a;
+  color: #f7fbf4;
+}
+
+.metric-card.highlight::after {
+  content: 'IN DATE';
+  position: absolute;
+  right: 16px;
+  bottom: 15px;
+  color: rgba(235, 246, 235, .42);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.metric-card.highlight .metric-label,
+.metric-card.highlight .metric-foot,
+.metric-card.highlight .metric-card strong {
+  color: #d6ebe2;
+}
+
+.metric-card.highlight > strong {
+  color: #fffdf3;
+}
+
+.metric-card.highlight .metric-icon.teal {
+  background: #e4bd66;
+  color: #174f4a;
+}
+
+.metric-card.warning {
+  background: #fff3d9;
+  border-color: #f0dfbd;
+}
+
+.metric-card.danger {
+  background: #fae7df;
+  border-color: #edd1c6;
+}
+
+.panel {
+  border-color: #e2e0d8;
+  border-radius: 9px;
+  box-shadow: var(--shadow);
+}
+
+.inventory-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.inventory-panel::before {
+  content: 'FEFO QUEUE';
+  position: absolute;
+  top: 0;
+  left: 22px;
+  padding: 4px 7px;
+  background: #e7c872;
+  color: #5a4c27;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.inventory-panel > .panel-heading {
+  padding-top: 15px;
+}
+
+.table-wrap table {
+  background: rgba(255, 253, 248, .42);
+}
+
+th {
+  background: #f6f4ee;
+  border-color: #e7e5de;
+  color: #8b9690;
+}
+
+td {
+  border-bottom-color: #eeece5;
+}
+
+tbody tr:hover {
+  background: #fff9ed;
+}
+
+.alerts-panel {
+  background: #fffaf0;
+  border-color: #eedfca;
+}
+
+.alert-summary {
+  background: #f8e8c5;
+  border-color: #efd8aa;
+}
+
+.alert-ring {
+  border-color: #c86d45;
+  color: #a45337;
+}
+
+.expired-alert-days {
+  color: var(--red) !important;
+  font-size: 9px !important;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+
+.reminder-strip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 18px 0 8px;
+  padding: 11px 10px;
+  border: 1px solid #efd6a7;
+  border-radius: 7px;
+  background: #fff1d1;
+}
+
+.reminder-bell {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  border-radius: 7px;
+  background: #e8bf68;
+  color: #6e5121;
+}
+
+.reminder-strip div {
+  flex: 1;
+}
+
+.reminder-strip strong,
+.reminder-strip span {
+  display: block;
+}
+
+.reminder-strip strong {
+  color: #76572a;
+  font-size: 10px;
+}
+
+.reminder-strip div span {
+  margin-top: 3px;
+  color: #aa8956;
+  font-size: 9px;
+}
+
+.reminder-count {
+  color: #a45f2f;
+  font: 700 14px 'Manrope';
+}
+
+.reminder-list {
+  display: grid;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.reminder-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 5px;
+  border-bottom: 1px dashed #eddfc8;
+}
+
+.reminder-row strong,
+.reminder-row span {
+  display: block;
+}
+
+.reminder-row strong {
+  color: #596761;
+  font-size: 10px;
+}
+
+.reminder-row div span {
+  margin-top: 3px;
+  color: #a2aaa4;
+  font-size: 9px;
+}
+
+.reminder-row > span {
+  color: #b76d2d;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.modal {
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.quarantine-icon {
+  background: #f6dcd3;
+}
+
+.footer-note {
+  color: #87938c;
+}
+
+@media (max-width: 1100px) {
+  .main-content { padding: 0 28px 28px; }
+}
+
+@media (max-width: 720px) {
+  .sidebar { width: 62px; flex-basis: 62px; padding: 20px 9px; }
+  .main-content { padding: 0 16px 24px; }
+  .heading-actions { width: 100%; justify-content: space-between; }
+  .control-status { font-size: 8px; }
+  .page-heading h1 { font-size: 27px; }
+}
